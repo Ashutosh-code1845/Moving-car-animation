@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+}
+.sky{
+    background-image: url('./background.jpg');
+    position: absolute;
+    height: 100vh;
+    width: 800vw;
+    top: 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.track{
+    background-image: url('./track.png');
+    position: absolute;
+    height: 100vh;
+    width: 900vw;
+    top: 500px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    animation-name:tracker;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+}
+.tree{
+    background-image: url('./trees.png');
+    position: absolute;
+    background-size:cover;
+    height: 100%;
+    width: 600vw;
+    background-position: center center;
+    background-repeat: no-repeat;
+    bottom: 250px;
+    animation-name: sky;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+.car{
+    background-image:url('./car_body.png');
+   position: absolute;
+    background-size:cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 380px;
+    left: 250px;
+    bottom: 180px;
+}
+.right{
+    background-image: url('./car_wheel_right.png');
+    position: absolute;
+    background-size:cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 80px;
+    width: 80px;
+    left: 42px;
+    top:33px;
+    animation-name: wheelrotate;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.left{
+background-image: url('./car_wheel_left.png');
+position: absolute;
+background-size:cover;
+background-position: center center;
+background-repeat: no-repeat;
+animation-name: wheelrotate;
+animation-duration: 0.3s;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+height: 65px;
+width: 65px;
+left: 240px;
+top:42px;
+}
+@keyframes wheelrotate{
+    100%{
+    transform:rotate(360deg);
+    }
+}
+@keyframes tracker{
+    100%{
+        transform:translateX(-500vw);
+    }
+}
+@keyframes sky{
+    100%{
+    transform:translateX(450vw);
+    }
+}
+.tree2{
+    background-image: url('./trees.png');
+    position: absolute;
+    background-size:cover;
+    height: 100%;
+    width: 100vw;
+    background-position: center center;
+    background-repeat: no-repeat;
+    bottom: 130px;
+}
